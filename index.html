@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <style>
+        body {display: flex; height: 100vh; }
+        #calculator { 
+            margin: auto; 
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 5px rgb(0, 0, 0);
+            border-radius: 10px;
+        }
+        #display, button {
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 0 5px rgb(0, 0, 0);
+            border-radius: 10px;
+            font: 2em Impact;
+            outline: none;
+        }
+        #display {
+            width: 570px;
+            text-align: right;
+        }
+        .btn:active {
+            background: #ddd;
+            box-shadow: inset 0 0 5px black;
+        }
+        .btn {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <div id="calculator">
+        <div>
+            <input id="display" type="text" disabled>
+        </div>
+
+        <div>
+            <button class="btn" data-action="reset">C</button>
+            <button> </button>
+            <button> </button>
+            <button> </button>
+            <button class="btn" data-action="operator" data-value="/">/</button>
+        </div>
+
+        <div>
+            <button class="btn" data-action="powerOff">OFF</button>
+            <button class="btn" data-action="number" data-value="7">7</button>
+            <button class="btn" data-action="number" data-value="8">8</button>
+            <button class="btn" data-action="number" data-value="9">9</button>
+            <button class="btn" data-action="operator" data-value="*">x</button>
+        </div>
+
+        <div>
+            <button class="btn" data-action="sqrt">√</button>
+            <button class="btn" data-action="number" data-value="4">4</button>
+            <button class="btn" data-action="number" data-value="5">5</button>
+            <button class="btn" data-action="number" data-value="6">6</button>
+            <button class="btn" data-action="operator" data-value="-">-</button>
+        </div>
+
+        <div>
+            <button class="btn" data-action="del">del</button>
+            <button class="btn" data-action="number" data-value="1">1</button>
+            <button class="btn" data-action="number" data-value="2">2</button>
+            <button class="btn" data-action="number" data-value="3">3</button>
+            <button class="btn" data-action="operator" data-value="+">+</button>
+        </div>
+
+        <div>
+            <button class="btn" data-action="powerOn">ON</button>
+            <button class="btn" data-action="number" data-value="0">0</button>
+            <button class="btn" data-action="number" data-value="00">00</button>
+            <button class="btn" data-action="number" data-value=".">.</button>
+            <button class="btn" data-action="equel">=</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
